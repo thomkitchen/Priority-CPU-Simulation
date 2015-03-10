@@ -19,13 +19,14 @@ public class Process {
 	 public  int arrivalTime;	//
 	 public  int cpuDuration;
 	 public  int ioDuration;
-	 public  int responseTime;	//						                      | //Attributes for each process
+	 public  int responseTime; //Attributes for each process
 	 public  int waitTime;		//  Determined by simulation
 	 public  int turnAroundTime = 0;	//																	
 	 public  int finishTime;	//																	
 	 public  boolean isDone;																		
 	 public  boolean isInCPU, isInIO, isInQueue; 							 				
-		 																
+		
+	//Overloaded constructors initializing all the key values to be read from text file	
 	 public Process(int id, int cpu, int io, int p) {
 		 pID = id;
 		 cpuBurst = cpu;
@@ -63,5 +64,5 @@ public class Process {
 		 pID = p;
 	 }
 
-
+	//etc. for other attributes. I won't be using any get and set methods since they will be set once by the constructor
 }
